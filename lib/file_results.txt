@@ -1,0 +1,2 @@
+Player: denis , attempts: 1, all_attempts: 1
+Player: denis , attempts: 1, all_attempts: 150
