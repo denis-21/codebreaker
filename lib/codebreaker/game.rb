@@ -14,6 +14,7 @@ module Codebreaker
 
     def compare user_code
       return 'You entered is not a number, or a length of less than 4 or greater is present number 6' unless user_code.match(/^[1-6]{4}/)
+      @attempt -= 1
       tmp_code = @secret_code.clone
       tmp_user_code = user_code.clone
       msg = String.new
@@ -34,7 +35,10 @@ module Codebreaker
           msg << '-'
         end
       end
-
+      
+      if @attempt ==0 && msg != '++++'
+        return 'Game over'
+        
       msg
     end
 
