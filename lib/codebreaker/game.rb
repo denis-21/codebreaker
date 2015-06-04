@@ -38,7 +38,7 @@ module Codebreaker
       
       if @attempt ==0 && msg != '++++'
         return 'Game over'
-        
+      end  
       msg
     end
 
