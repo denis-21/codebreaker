@@ -43,6 +43,7 @@ module Codebreaker
     end
 
     def get_hint
+      return 'Already used' unless @hint
       @hint = false
       result = '****'
       val = rand(@secret_code.size)
